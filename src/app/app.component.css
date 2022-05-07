@@ -1,0 +1,40 @@
+.main-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.parentTileClass{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.childTileClass{
+    height: 62px;
+    width: 62px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid skyblue;
+    margin: 2px;
+
+}
+
+.keyboard{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keyboard button{
+    width: 43px;
+    height: 53px;
+    border-radius: 4px;
+    border: none;
+    margin: 4px;
+    cursor: pointer;
+}
+

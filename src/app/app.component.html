@@ -1,3 +1,30 @@
 <div class="main-container">
+  <!-- <div class="header">Wordle</div> -->
+  <ng-container  class="tiles" *ngFor="let item of boxes">
 
+      <div class="parentTileClass">
+        <ng-container  *ngFor ="let innerItem of item">
+          <div class="childTileClass"></div>
+        </ng-container >
+      </div>
+
+  </ng-container >
+  <div class="keyboard"  >
+    <ng-container   *ngFor="let key of keyboard" >
+      <ng-container *ngIf="key==='ENTER'">
+
+        <button id={{key}} style="width: 70px;">{{key}}</button>
+      </ng-container>
+      <ng-container *ngIf="key==='BACKSPACE'">
+
+        <button id={{key}} style="width: 90px;">{{key}}</button>
+      </ng-container>
+      <ng-container *ngIf="(key!=='ENTER')&&(key!=='BACKSPACE')">
+        <button id={{key}}>{{key}}</button>
+
+      </ng-container>
+
+    </ng-container >
+
+  </div>
 </div>
