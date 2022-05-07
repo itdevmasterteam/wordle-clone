@@ -4,7 +4,7 @@
 
       <div class="parentTileClass">
         <ng-container  *ngFor ="let innerItem of item">
-          <div class="childTileClass"></div>
+          <div class="childTileClass">{{innerItem}}</div>
         </ng-container >
       </div>
 
@@ -13,14 +13,14 @@
     <ng-container   *ngFor="let key of keyboard" >
       <ng-container *ngIf="key==='ENTER'">
 
-        <button id={{key}} style="width: 70px;">{{key}}</button>
+        <button id={{key}} style="width: 70px;" (click)="handleClick(key)">{{key}}</button>
       </ng-container>
       <ng-container *ngIf="key==='BACKSPACE'">
 
-        <button id={{key}} style="width: 90px;">{{key}}</button>
+        <button id={{key}} style="width: 90px;" (click)="handleClick(key)">{{key}}</button>
       </ng-container>
-      <ng-container *ngIf="(key!=='ENTER')&&(key!=='BACKSPACE')">
-        <button id={{key}}>{{key}}</button>
+      <ng-container *ngIf="(key!=='ENTER')&&(key!=='BACKSPACE')" >
+        <button id={{key}} (click)="handleClick(key)">{{key}}</button>
 
       </ng-container>
 
