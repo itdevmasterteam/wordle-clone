@@ -4,23 +4,23 @@
 
       <div class="parentTileClass">
         <ng-container  *ngFor ="let innerItem of item">
-          <div class="childTileClass">{{innerItem}}</div>
+          <div id={{innerItem.class}} class="childTileClass">{{innerItem?.key}}</div>
         </ng-container >
       </div>
 
   </ng-container >
   <div class="keyboard"  >
     <ng-container   *ngFor="let key of keyboard" >
-      <ng-container *ngIf="key==='ENTER'">
+      <ng-container *ngIf="key.key==='ENTER'">
 
-        <button id={{key}} style="width: 70px;" (click)="handleClick(key)">{{key}}</button>
+        <button  id={{key.class}} style="width: 70px;" (click)="handleClick(key.key)">{{key.key}}</button>
       </ng-container>
-      <ng-container *ngIf="key==='BACKSPACE'">
+      <ng-container *ngIf="key.key==='BACKSPACE'">
 
-        <button id={{key}} style="width: 90px;" (click)="handleClick(key)">{{key}}</button>
+        <button id={{key.key}} style="width: 90px;" (click)="handleClick(key.key)">{{key.key}}</button>
       </ng-container>
-      <ng-container *ngIf="(key!=='ENTER')&&(key!=='BACKSPACE')" >
-        <button id={{key}} (click)="handleClick(key)">{{key}}</button>
+      <ng-container *ngIf="(key.key!=='ENTER')&&(key.key!=='BACKSPACE')" >
+        <button class={{key.class}} id={{key.class}} (click)="handleClick(key.key)">{{key.key}}</button>
 
       </ng-container>
 
