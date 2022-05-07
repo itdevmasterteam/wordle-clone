@@ -15,11 +15,13 @@
 .childTileClass{
     height: 62px;
     width: 62px;
+    display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     border: 2px solid skyblue;
     margin: 2px;
+    font-size: 50px;
 
 }
 
