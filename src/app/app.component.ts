@@ -30,7 +30,7 @@ export class AppComponent {
     //when key is backspace
     if(key ==='BACKSPACE'){
       console.log('clicked key is backspace')
-      this.removeItemsFromRow(key,this.currentRowIndex)
+      this.removeItemsFromRow(key)
       return
     }
     if(this.currentRow<6&&this.currentRowIndex<5){
@@ -43,7 +43,7 @@ export class AppComponent {
   }
 
   //functiom called when backspace pressed
-  removeItemsFromRow(letter:any,currentRownIndex:any){
+  removeItemsFromRow(letter:any){
     console.log('clicked backespace')
     let arrayToBePushed:any
     //makking string from array, to be removed when backspace clicked
@@ -58,7 +58,7 @@ export class AppComponent {
    arrayToBePushed = [...arrayToBePushed,...Array(5-arrayToBePushed.length)]
    this.boxes[this.currentRow] = arrayToBePushed
    this.currentRowIndex--
-   console.log({arrayToBePushed,boxes:this.boxes,currentRownIndex})
+   console.log({arrayToBePushed,boxes:this.boxes,curr:this.currentRowIndex})
   
 
   }
